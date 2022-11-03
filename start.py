@@ -20,17 +20,21 @@ data=json.load(f)
 for i in data['staffs']:
     if((i["birthday"]).startswith(day)):
         person = (i["name"])
-try:
-    print(person)
-    bot.send_photo(-321996347, photo=open('rasm.jpg', 'rb'),caption="🎉🎉🎉*Happy birthday!!!* \n\n🎂Today is birthday of *{}!* \n Congratulations! 👏👏👏👏👏+\n\n*Our social networks:* \n[WWW](https://www.siut.uz/index.php) ▫️ [Instagram](https://www.instagram.com/siut.uz/) ▫️ [Facebook](https://www.facebook.com/siut.uz) ▫️ [Telegram](https://t.me/siut_uz)\n©️ Copyright: @Islom\_Mamatov".format(person), parse_mode='Markdown')
+        try:
+            print(person)
+            bot.send_photo(-321996347, photo=open('rasm.jpg', 'rb'),caption="🎉🎉🎉*Happy birthday!!!* \n\n🎂Today is birthday of *{}!* \n Congratulations! 👏👏👏👏👏\n\n*Our social networks:* \n[WWW](https://www.siut.uz/index.php) ▫️ [Instagram](https://www.instagram.com/siut.uz/) ▫️ [Facebook](https://www.facebook.com/siut.uz) ▫️ [Telegram](https://t.me/siut_uz)\n©️ Copyright: @Islom\_Mamatov".format(person), parse_mode='Markdown')
 
-except:
-    print ("Today is nobody's birthday")
+        except:
+            print ("Today is nobody's birthday")
 
 f.close()
 
+# Weather forecast
+#bot.send_photo(-1001712122376, photo=open('rain.jpg', 'rb'),caption="*Good morning!!!* \n\nToday will rain. 🌧 Don't Forget Your Umbrella. \n _Have a nice day!_ 😍\n\n*Our social networks:* \n[WWW](https://www.siut.uz/index.php) ▫️ [Instagram](https://www.instagram.com/siut.uz/) ▫️ [Facebook](https://www.facebook.com/siut.uz) ▫️ [Telegram](https://t.me/siut_uz)\n©️ Copyright: @Islom\_Mamatov", parse_mode='Markdown')
 
-# SIUT Team Group id is --> -1001712122376
+
+# SIUT Team Group id --> -1001712122376
+# Testing group id --> -321996347
 
 #@bot.message_handler(commands=['start'])
 #def send_message(message):
