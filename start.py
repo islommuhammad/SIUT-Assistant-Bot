@@ -30,6 +30,7 @@ def main():
             try:
                 #print(person)
                 bot.send_message(-321996347, text="BOT is working. Today is "+kun, parse_mode='Markdown')
+                time.sleep(60)
 
             except:
                 print ("Xatolik")
