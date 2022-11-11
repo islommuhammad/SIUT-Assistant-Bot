@@ -29,17 +29,18 @@ def main():
         else:
             try:
                 bot.send_message(-321996347, text="BOT is working. Today is "+kun, parse_mode='Markdown')
-                
+     
 
             except:
                 print ("Xatolik")
-        return schedule.CancelJob
+        break
+        
     f.close()
     
 
 
-#schedule.every(2).minutes.do(main)
-schedule.every(1).day.at("07:20").do(main)
+schedule.every(1).minutes.do(main)
+#schedule.every(1).day.at("07:20").do(main)
 
 while True:
     schedule.run_pending()
