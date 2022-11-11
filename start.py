@@ -27,13 +27,7 @@ def main():
 
             except:
                 print ("Today is nobody's birthday")
-        else:
-            try:
-                bot.send_message(-321996347, text="BOT is working. Today is "+kun, parse_mode='Markdown')
-     
-
-            except:
-                print ("Xatolik")
+        
         break
         
     f.close()
@@ -41,7 +35,7 @@ def main():
 
 
 schedule.every(1).minutes.do(main)
-schedule.every(1).day.at("07:30").do(main)
+schedule.every(1).day.at("07:40").do(main)
 
 while True:
     schedule.run_pending()
