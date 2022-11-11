@@ -34,6 +34,7 @@ def main():
             except:
                 print ("Xatolik")
     f.close()
+    time.sleep(120)
 
 
 schedule.every(1).day.at("05:56").do(main)
