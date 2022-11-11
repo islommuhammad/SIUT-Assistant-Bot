@@ -34,13 +34,13 @@ def main():
             except:
                 print ("Xatolik")
     f.close()
-    time.sleep(120)
+time.sleep(120)
 
 
-schedule.every(1).day.at("06:01").do(main)
+schedule.every(1).day.at("06:06").do(main)
 while True:
     schedule.run_pending()
-    time.sleep(120)
+    time.sleep(1)
 
 if __name__ == '__main__':
     main()
