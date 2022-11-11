@@ -29,14 +29,14 @@ def main():
         else:
             try:
                 #print(person)
-                bot.send_message(-321996347, text="BOT is working", parse_mode='Markdown')
+                bot.send_message(-321996347, text="BOT is working. Today is "+kun, parse_mode='Markdown')
 
             except:
                 print ("Xatolik")
     f.close()
 
 
-schedule.every().day.at("05:46").do(main)
+schedule.every(1).day.at("05:46").do(main)
 while True:
     schedule.run_pending()
     time.sleep(120)
