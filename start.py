@@ -27,6 +27,7 @@ def main():
 
             except:
                 print ("Today is nobody's birthday")
+                bot.send_message(-321996347, text="Today is nobody's birthday")
         
         break
         
