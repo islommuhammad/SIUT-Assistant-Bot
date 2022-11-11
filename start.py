@@ -13,9 +13,7 @@ def main():
     today = date.today()
     day = today.strftime("%d-%m")
     kun = today.strftime("%d-%m-%Y")
-    day = "03-11"
-    print (day)
-
+   
     f = open('staffs.json')
     data=json.load(f)
 
@@ -38,7 +36,7 @@ def main():
 
 
 #schedule.every(1).minutes.do(main)
-schedule.every().day.at("08:11").do(main)
+schedule.every().day.at("02:00").do(main)
 
 while True:
     schedule.run_pending()
