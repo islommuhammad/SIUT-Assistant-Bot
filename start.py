@@ -1,18 +1,19 @@
 
-import telebot
 import json
-import schedule
+import os
 import time
-#import db
 from datetime import date
+import schedule
+import telebot
+
 
 def main():
-    token = '5467137013:AAHZ7dEK5mLlrPMUn-ZzWR2agqPOzvgIcHo'
+    token = os.environ.get("TOKEN")
     bot = telebot.TeleBot(token)
     today = date.today()
     day = today.strftime("%d-%m")
     kun = today.strftime("%d-%m-%Y")
-    day = "03-11"
+    #day = "03-11"
     print (day)
 
     f = open('staffs.json')
@@ -22,21 +23,22 @@ def main():
         if((i["birthday"]).startswith(day)):
             person = (i["name"])
             try:
-                #print(person)
+                print(person)
+                print ("Bugun"+day)
                 bot.send_photo(-321996347, photo=open('rasm.jpg', 'rb'),caption="🎉🎉🎉*Happy birthday!!!* \n\n🎂Today is birthday of *{}!* \n Congratulations! 👏👏👏👏👏\n\n*Our social networks:* \n[WWW](https://www.siut.uz/index.php) ▫️ [Instagram](https://www.instagram.com/siut.uz/) ▫️ [Facebook](https://www.facebook.com/siut.uz) ▫️ [Telegram](https://t.me/siut_uz)\n©️ Copyright: @Islom\_Mamatov".format(person), parse_mode='Markdown')
 
             except:
-                print ("Today is nobody's birthday")
-                bot.send_message(-321996347, text="Today is nobody's birthday")
+                print ("Qandaydir xatolik")
+    bot.send_message(-321996347, text="Bot is working properly. System date is: "+kun)            
         
-        break
+        
         
     f.close()
     
 
 
-schedule.every(1).minutes.do(main)
-schedule.every(1).day.at("07:40").do(main)
+#schedule.every(1).minutes.do(main)
+schedule.every().day.at("08:07").do(main)
 
 while True:
     schedule.run_pending()
