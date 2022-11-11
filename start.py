@@ -36,7 +36,7 @@ def main():
     f.close()
 
 
-schedule.every(1).day.at("05:46").do(main)
+schedule.every(1).day.at("05:56").do(main)
 while True:
     schedule.run_pending()
     time.sleep(120)
