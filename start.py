@@ -14,8 +14,8 @@ def main():
     today = date.today()
     day = today.strftime("%d-%m")
     kun = today.strftime("%d-%m-%Y")
-   
-    f = open('./staffs.json')
+    path = (os.path.abspath(__file__))
+    f = open(path+'/staffs.json')
     data=json.load(f)
 
     for i in data['staffs']:
@@ -42,7 +42,7 @@ def main():
 # while True:
 #     schedule.run_pending()
 #     time.sleep(1)
-print (os.path.abspath(__file__))
+
 
 if __name__ == '__main__':
     main()
