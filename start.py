@@ -15,7 +15,7 @@ def main():
     day = today.strftime("%d-%m")
     kun = today.strftime("%d-%m-%Y")
    
-    f = open('staffs.json')
+    f = open('./staffs.json')
     data=json.load(f)
 
     for i in data['staffs']:
