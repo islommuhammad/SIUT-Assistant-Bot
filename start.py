@@ -8,7 +8,8 @@ import telebot
 
 
 def main():
-    token = os.environ.get("TOKEN")
+    token = "5467137013:AAHZ7dEK5mLlrPMUn-ZzWR2agqPOzvgIcHo"
+    #token = os.environ.get("TOKEN")
     bot = telebot.TeleBot(token)
     today = date.today()
     day = today.strftime("%d-%m")
@@ -36,11 +37,11 @@ def main():
 
 
 #schedule.every(1).minutes.do(main)
-schedule.every().day.at("02:00").do(main)
+# schedule.every().day.at("02:00").do(main)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
 
 if __name__ == '__main__':
     main()
