@@ -27,7 +27,7 @@ def main():
             try:
                 print(person)
                 print ("Bugun "+day)
-                bot.send_photo(-321996347, photo=open(path+'rasm.jpg', 'rb'),caption="🎉🎉🎉*Happy birthday!!!* \n\n🎂Today is birthday of *{}!* \n Congratulations! 👏👏👏👏👏\n\n*Our social networks:* \n[WWW](https://www.siut.uz/index.php) ▫️ [Instagram](https://www.instagram.com/siut.uz/) ▫️ [Facebook](https://www.facebook.com/siut.uz) ▫️ [Telegram](https://t.me/siut_uz)\n©️ Copyright: @Islom\_Mamatov".format(person), parse_mode='Markdown')
+                bot.send_photo(-321996347, photo=open(path+'/rasm.jpg', 'rb'),caption="🎉🎉🎉*Happy birthday!!!* \n\n🎂Today is birthday of *{}!* \n Congratulations! 👏👏👏👏👏\n\n*Our social networks:* \n[WWW](https://www.siut.uz/index.php) ▫️ [Instagram](https://www.instagram.com/siut.uz/) ▫️ [Facebook](https://www.facebook.com/siut.uz) ▫️ [Telegram](https://t.me/siut_uz)\n©️ Copyright: @Islom\_Mamatov".format(person), parse_mode='Markdown')
 
             except:
                 print ("Qandaydir xatolik")
