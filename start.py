@@ -16,7 +16,7 @@ def main():
     kun = today.strftime("%d-%m-%Y")
     # path = os.path.abspath(os.getcwd())
     path = os.path.dirname(__file__)
-    f = open(path+'./staffs.json')
+    f = open(path+'/staffs.json')
     data=json.load(f)
 
     for i in data['staffs']:
