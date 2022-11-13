@@ -23,7 +23,7 @@ def main():
             person = (i["name"])
             try:
                 print(person)
-                print ("Bugun"+day)
+                print ("Bugun "+day)
                 bot.send_photo(-321996347, photo=open('rasm.jpg', 'rb'),caption="🎉🎉🎉*Happy birthday!!!* \n\n🎂Today is birthday of *{}!* \n Congratulations! 👏👏👏👏👏\n\n*Our social networks:* \n[WWW](https://www.siut.uz/index.php) ▫️ [Instagram](https://www.instagram.com/siut.uz/) ▫️ [Facebook](https://www.facebook.com/siut.uz) ▫️ [Telegram](https://t.me/siut_uz)\n©️ Copyright: @Islom\_Mamatov".format(person), parse_mode='Markdown')
 
             except:
@@ -42,6 +42,7 @@ def main():
 # while True:
 #     schedule.run_pending()
 #     time.sleep(1)
+print (os.path.abspath(__file__))
 
 if __name__ == '__main__':
     main()
